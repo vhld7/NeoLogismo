@@ -1,0 +1,63 @@
+/* 1. Use o modelo Box-Sizing moderno em todos os elementos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Zera as margens e paddings padrões */
+/* (o :where() evita aumentar a especificidade no seletor) */
+:where(body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd) {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Define padrões de corpo para melhor acessibilidade e performance */
+body {
+  /* Melhora a legibilidade do texto (acessibilidade WCAG 1.5) */
+  line-height: 1.5;
+  /* Garante que o body ocupa pelo menos a altura da viewport */
+  min-height: 100vh;
+  /* Otimiza a renderização de texto em navegadores Webkit (Chrome/Safari) */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4. Garante que elementos de mídia sejam responsivos e fáceis de trabalhar */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Faz com que fontes em inputs e botões herdem do elemento pai */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 6. Remove estilos de listas em elementos sem o atributo 'role' (Se aplicável) */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* 7. Comportamento de scroll suave ao focar ou navegar */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* 8. Garante que o texto longo em parágrafos não cause overflow */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
