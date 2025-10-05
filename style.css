@@ -1,3 +1,4 @@
+
 :root {
     --cor-roxa-escura: #660066;
     --cor-roxa-meio-tom: #996699;
@@ -12,21 +13,31 @@ body {
 
 /* Header */
 header {
+    height: 90px;
     width: 100vw;
+    align-items: center;
     position: fixed;
     background-color: var(--cor-roxa-meio-tom);
     color: white;
-    padding: 1.5rem 2rem;
+    justify-content: space-between;
+    padding: 20px 30px;
     border-radius: 30px;
     box-shadow: 0px 5px 15px var(--cor-roxa-escura);
     margin-bottom: 20px;
 }
 
 nav {
+    align-items: center;
     justify-content: space-between;
     margin-left: 20px;
     gap: 20px;
     display: flex;
+}
+
+nav img{
+    width: 200px;
+    height: 47px;
+    margin-right: 30px; 
 }
 
 header ul {
@@ -38,6 +49,80 @@ header ul {
 header ul li {
     font-size: 1.1rem;
 }
+/*barra de pesquisa*/
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+  width: 40px;
+}
+.form {
+  --timing: 0.3s;
+  --width-of-input: 400px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: var(--cor-roxa-escura);
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  flex-grow: 1;
+  max-width: 400px; 
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg,#fff);
+}
+.input {
+  width: 100%;
+  padding: 10px 15px;
+  padding-left: 40px; /* Espaço para o ícone */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borda mais suave */
+  border-radius: 20px; /* Bordas arredondadas */
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semitransparente */
+  color: #333;
+  font-size: 16px;
+}
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+input:focus {
+  outline: none;
+}
+.form:focus-within:before {
+  transform: scale(1);
+}
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}
+/* fim da barra de pesquisa */
 
 /* Main */
 main {
