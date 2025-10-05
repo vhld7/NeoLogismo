@@ -1,10 +1,8 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --cor-roxa-escura: #660066;
+    --cor-roxa-meio-tom: #996699;
+    --cor-roxa-clara: #cc99cc;
 }
-
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
@@ -14,10 +12,14 @@ body {
 
 /* Header */
 header {
-    background-color: #660066;
+    width: 100vw;
+    position: fixed;
+    background-color: var(--cor-roxa-meio-tom);
     color: white;
     padding: 1.5rem 2rem;
     border-radius: 30px;
+    box-shadow: 0px 5px 15px var(--cor-roxa-escura);
+    margin-bottom: 20px;
 }
 
 nav {
@@ -50,7 +52,7 @@ main h1 {
 
 /* Footer */
 footer {
-    background-color: #660066;
+    background-color: var(--cor-roxa-meio-tom);
     color: white;
     padding: 2rem;
     position: relative;
