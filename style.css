@@ -22,7 +22,7 @@ header {
     justify-content: space-between;
     padding: 20px 30px;
     border-radius: 30px;
-    box-shadow: 0px 5px 15px var(--cor-roxa-escura);
+    box-shadow: 0px 5px 15px #3b3b3b;
     margin-bottom: 20px;
 }
 
@@ -128,7 +128,7 @@ input:not(:placeholder-shown) ~ .reset {
 main {
     flex: 1;
     padding: 2rem;
-    background-color: #fff;
+    background-color: var(--cor-roxa-escura);
 }
 
 main h1 {
