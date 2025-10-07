@@ -134,6 +134,11 @@ main h1 {
     margin-bottom: 1rem;
 }
 
+main p{
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
 /* Footer */
 footer {
     background-color: var(--cor-roxa-meio-tom);
@@ -141,5 +146,22 @@ footer {
     padding: 2rem;
     position: relative;
     min-height: 150px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
